@@ -106,7 +106,6 @@ body {
 
 .movie-sv-a {
   width: 100%;
-  padding: 15px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: 0 auto;
