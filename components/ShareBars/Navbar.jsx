@@ -17,7 +17,6 @@ const Navbar = () => {
 
             <section className="flex justify-between mr-4">
                 <Link href='/Upload' className='pr-4 py-2 rounded-2xl flex justify-center items-center '> <FaCloudUploadAlt size={30} />  </Link>
-                <GoogleAuth />
             </section>
 
         </nav>
