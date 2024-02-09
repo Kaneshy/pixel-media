@@ -52,7 +52,10 @@ const DetailsPage = ({ params }) => {
                                         </a>
                                     </div>
                                 </div>
+
+                                <p className='font-bold text-lg '>last watched: {namemedia.watched && namemedia.watched }</p>
                                 <p className='font-bold text-lg '>{namemedia.desc}</p>
+
                             </div>
 
                             {/* <div className='absolute -bottom-1 -right-1 rounded-full bg-purple-600 p-2 text-white'>{namemedia.review}</div> */}

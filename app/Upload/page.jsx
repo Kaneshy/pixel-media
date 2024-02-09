@@ -32,8 +32,8 @@ const UploadPage = () => {
 
   const uploadFile = (file, urlType) => {
     const storage = getStorage(app);
-
-    const storageRef = ref(storage, 'images/' + file.name);
+    const newFileName = file.name + (Math.floor(Math.random() * 2000) + 1)
+    const storageRef = ref(storage, 'images/' + newFileName);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on(
@@ -130,6 +130,11 @@ const UploadPage = () => {
         <div className="mb-4 border-gray-500 border   p-2 w-full">
           <label htmlFor="linkb" className="text-small-semibold block text-gray-400 font-bold mb-2 ">Link b (required): </label>
           <input type="text" id="title" name='linkb' onChange={handleChange} className="border-neutral-500 border  bg-neutral-900 p-2 w-full text-white" />
+        </div>
+
+        <div className="mb-4 border-gray-500 border   p-2 w-full">
+          <label htmlFor="watched" className="text-small-semibold block text-gray-400 font-bold mb-2 ">Last Watched  </label>
+          <input type="number" id="watched" name='watched' onChange={handleChange} className="border-neutral-500 border  bg-neutral-900 p-2 w-full text-white" />
         </div>
 
         <div className="mb-4 border-gray-500 border   p-2 w-full">

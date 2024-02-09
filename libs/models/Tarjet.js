@@ -24,7 +24,11 @@ const TarjetSchema = new mongoose.Schema({
     desc: {
         type: String,
         required: true,
-    }   
+    },
+    watched: {
+        type: Number,
+        required: false,
+    }  
 },{timestamps:true})
 
 const Tarjet = mongoose.models.Tarjet || mongoose.model("Tarjet", TarjetSchema);
